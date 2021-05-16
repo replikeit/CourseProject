@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>CourseProject.App.Web</RootNamespace>
+        <Configurations>Debug;Release;</Configurations>
+        <Platforms>AnyCPU;x64</Platforms>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0-preview.3.21201.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.0-preview.3.21201.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0-preview.3.21201.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0-preview.3.21201.2">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.0-preview.3.21209.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CourseProject.Core.Audio\CourseProject.Core.Audio.csproj" />
+      <ProjectReference Include="..\CourseProject.Core.DataAccess\CourseProject.Core.DataAccess.csproj" />
+      <ProjectReference Include="..\CourseProject.Engine.Cntk\CourseProject.Engine.Cntk.csproj" />
+      <ProjectReference Include="..\CourseProject.Engine\CourseProject.Engine.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\files" />
+    </ItemGroup>
+
+</Project>
